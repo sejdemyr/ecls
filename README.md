@@ -24,7 +24,7 @@ Use, and the download should begin.
 'data-raw' from your copy of this repository (downloaded in step 1).
 5. Open 'R/ecls-clean.R' in R. Then:
    * Set your working directory to the folder you downloaded and
-     unzipped in steo 1 (e.g., `setwd('~/Desktop/ecls-master')`.
+     unzipped in step 1 (e.g., `setwd('~/Desktop/ecls-master')`.
    * Make sure you have all the packages loaded in the beginning of
      this script. If not, you can install them using
      `install.packages(c('Hmisc', 'dplyr', 'stringr'))`.
