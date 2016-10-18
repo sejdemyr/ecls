@@ -1,0 +1,30 @@
+ecls-codbook.txt --- Simon Ejdemyr (ejdemyr@gmail.com)
+This document describes the variables included in ecls.csv.
+
+VARIABLE        DESCRIPTION
+childid	        child identification number
+catholic        dummy: 1= catholic, 0 = public
+race            child composite race
+race_white      dummy: 1= race==white, 0= not white
+race_black      dummy: 1= race==black, 0= not black
+race_hispanic   dummy: 1= race==hispanic, 0= not hispanic
+race_asian      dummy: 1= race==asian, 0= not asian
+p5numpla        fall 3rd grade: # of places child has lived for at
+                     least 4 months since 1st grade
+p5hmage	        fall 3rd grade: age of mother
+p5hdage	        fall 3rd grade: age of father
+w3daded	        fall 3rd grade: father's education level
+w3momed	        fall 3rd grade: mother's education level
+w3daded_hsb     dummy: 1= father's education level is high school or
+                       below, 0= some college or above
+w3momed_hsb     dummy: 1= mother's education level is high school or
+                       below, 0= some college or above
+w3momscr        fall 3rd grade: mother's occupational prestige score
+w3dadscr        fall 3rd grade: father's occupational prestige score
+w3inccat        fall 3rd grade: family income category (13 categories)
+w3income        fall 3rd grade: numeric family income (recoded by
+                     taking midvalue from each category of w3inccat)
+w3povrty        poverty score dummy
+p5fstamp        food stamp dummy
+c5r2mtsc        3rd grade math t-score
+c5r2mtsc_std    standardized values of c5r2mtsc

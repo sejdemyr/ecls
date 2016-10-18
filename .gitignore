@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.*.Rnb.cached
+.DS_Store
+
+data-processed/*
+!data-processed/ecls-codebook.txt
+
+data-raw/*
+!data-raw/readme.txt
