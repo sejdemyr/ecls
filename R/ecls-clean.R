@@ -1,7 +1,6 @@
 # ecls-clean.R --- Simon Ejdemyr (ejdemyr@gmail.com)
 # An R script for processing data from the Early Childhood Longitudinal
-# Study. The output is saved to 'data-processed/ecls-processed.csv'.
-
+# Study. The output is saved to 'data-processed/ecls.csv'.
 
 # Begin by changing your working directory as necessary here
 setwd('~/dropbox/ecls')
