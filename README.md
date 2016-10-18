@@ -1,5 +1,5 @@
 
-# ecls: Processing Data from the Early Childhood Longitudinal Study #
+# Processing Data from the Early Childhood Longitudinal Study #
 
 This repository reproduces the dataset used
 in [this tutorial on propensity score matching](http://stanford.edu/~ejdemyr/r-tutorials-archive/tutorial8.html).
