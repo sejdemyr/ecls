@@ -17,7 +17,7 @@ dta <- spss.get('data-raw/04075-0001-Data.por',
                 allow = '_')
 
 # Convert factors to character
-dta <- dta %>% tbl_df() %>% mutate_if(is.factor, as.character)
+dta <- dta %>% mutate_if(is.factor, as.character)
 
 # Filter down to catholic and public school students and create a
 # dummy for catholic
@@ -79,27 +79,27 @@ dta <- dta %>% filter(!c5r2mtsc %in% NA)
 
 # Select and rename variables as necessary
 dta <- dta %>%
-  select(childid,
-         catholic,
-         race = r5race,
-         race_white,
-         race_black,
-         race_hispanic,
-         race_asian,
-         p5numpla,
-         p5hmage,
-         p5hdage,
-         w3daded,
-         w3momed,
-         w3daded_hsb,
-         w3momed_hsb,
-         w3momscr,
-         w3dadscr,
-         w3inccat,
-         w3income,
-         w3povrty,
-         p5fstamp,
-         c5r2mtsc,
-         c5r2mtsc_std)
+  dplyr::select(childid,
+                catholic,
+                race = r5race,
+                race_white,
+                race_black,
+                race_hispanic,
+                race_asian,
+                p5numpla,
+                p5hmage,
+                p5hdage,
+                w3daded,
+                w3momed,
+                w3daded_hsb,
+                w3momed_hsb,
+                w3momscr,
+                w3dadscr,
+                w3inccat,
+                w3income,
+                w3povrty,
+                p5fstamp,
+                c5r2mtsc,
+                c5r2mtsc_std)
 
 write.csv(dta, 'data-processed/ecls.csv', row.names = FALSE)
