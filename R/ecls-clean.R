@@ -9,15 +9,38 @@ setwd('~/dropbox/ecls')
 library(Hmisc)
 library(dplyr)
 library(stringr)
+library(sjmisc)
 
 # Read the data
 dta <- spss.get('data-raw/04075-0001-Data.por',
                 lowernames = TRUE,
-                use.value.labels = TRUE,
+                use.value.labels = FALSE,
                 allow = '_')
 
-# Convert factors to character
-dta <- dta %>% mutate_if(is.factor, as.character)
+# Convert variables of interest to character/numeric
+vars_chrs <- c("childid",
+               "l5cathol",
+               "l5public",
+               "r5race",
+               "w3povrty",
+               "w3daded",
+               "w3momed",
+               "w3inccat",
+               "p5fstamp")
+
+vars_nums <- c("w3momscr",
+               "w3dadscr",
+               "p5numpla",
+               "p5hmage",
+               "p5hdage",
+               "c5r2mtsc")
+
+dta <- dta %>%
+  mutate_at(vars(one_of(vars_chrs)), funs(as.character(to_label(.)))) %>%
+  mutate_at(vars(one_of(vars_nums)), funs(as.numeric(as.character(to_label(.)))))
+
+# Select variables of interest
+dta <- dta %>% dplyr::select(one_of(c(vars_chrs, vars_nums)))
 
 # Filter down to catholic and public school students and create a
 # dummy for catholic

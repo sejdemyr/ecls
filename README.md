@@ -30,7 +30,7 @@ Use, and the download should begin.
      unzipped in step 1 (e.g., `setwd('~/Desktop/ecls-master')`.
    * Make sure you have installed all the packages loaded in the beginning of
      this script. If not, you can install them using
-     `install.packages(c('Hmisc', 'dplyr', 'stringr'))`.
+     `install.packages(c('Hmisc', 'dplyr', 'stringr', 'sjmisc'))`.
    * Execute the remainder of the script. Note that reading the data
        into R may take a little while.
 
