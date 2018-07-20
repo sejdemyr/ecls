@@ -3,19 +3,17 @@
 # Study. The output is saved to 'data-processed/ecls.csv'.
 
 # Begin by changing your working directory as necessary here
-setwd('~/dropbox/ecls')
+setwd('~/Dropbox/ecls')
 
-# Load required packages ('install.packages()' first if necessary)
-library(Hmisc)
-library(dplyr)
-library(stringr)
+# Load required packages ('install.packages()' first as necessary)
+library(tidyverse)
+library(haven)
 library(sjmisc)
 
-# Read the data
-dta <- spss.get('data-raw/04075-0001-Data.por',
-                lowernames = TRUE,
-                use.value.labels = FALSE,
-                allow = '_')
+# Read data. Note: this may take a little while. If you're getting a "can't
+# allocate memory" error, install the latest version of `haven` and restart R.
+dta <- read_por('data-raw/04075-0001-Data.por')
+names(dta) <- tolower(names(dta))
 
 # Convert variables of interest to character/numeric
 vars_chrs <- c("childid",
