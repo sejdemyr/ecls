@@ -20,7 +20,7 @@ the codebook ('data-processed/ecls-codebook.txt').
 1. Clone or download this repository and place it somewhere on your computer.
 2. Go to the [download page for
 ECLS](http://www.researchconnections.org/childcare/studies/4075?q=c5r2mtsc&type=Data+Sets).
-3. Under Dataset(s), click on 'SPSS', read and accept the Terms of
+3. Click on 'Download', choose 'SPSS', read and accept the Terms of
 Use, and the download should begin.
 4. Unzip the downloaded zip file. In it, there's a file called
 '04075-0001-Data.por'. Place this file directly in the folder
